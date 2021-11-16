@@ -2,10 +2,9 @@ import { createContext } from "react";
 // import React from 'react';
 
 const studentDetails = {
-    name : "Aakash Pawar",
+    name : "Student 1",
     age : 24,
-    course : "Elevation Academy",
-    tech : "MERN"
+    course : "MERN",
 }
 
 const Context = createContext(studentDetails);
