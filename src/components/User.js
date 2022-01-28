@@ -2,17 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 const User = () => {
 
-    //
     const [userName , setUserName] = useState(" ");
     const [userAge , setUserAge] = useState(24);
     const [userSalary , setUserSalary] = useState(24000);
-
-    // function setName (){
-    //     setUserName("Student")
-    // }
-
-    // fat arrow functions
-    // useEffect = componentDidMount
 
     useEffect(()=>{
         console.log("Inside useEffect hook");

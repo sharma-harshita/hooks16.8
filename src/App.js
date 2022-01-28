@@ -1,13 +1,15 @@
 import './App.css';
 import User from './components/User';
 import Students from './components/Students';
+import CompReducer from './components/CompReducer';
 
 function App() {
   return (
     <div className="App">
       Hello World !!
-      {/* <User/> */}
       <Students/>
+      <User/>
+      <CompReducer/>
     </div>
   );
 }

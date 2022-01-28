@@ -3,6 +3,8 @@ This application contains the introduction and code to understand the Hooks got 
   1. useState
   2. useEffect
   3. useContext
+  4. useReducer
+  5. useRef
 
 
 Other than hooks, it contains the introduction of how to setup context API in React project
