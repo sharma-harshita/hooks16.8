@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import LoginHOC from '../LoginHOC';
 
 const User = () => {
 
@@ -25,4 +26,4 @@ const User = () => {
     )
 }
 
-export default User;
+export default LoginHOC(User);

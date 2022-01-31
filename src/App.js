@@ -2,14 +2,16 @@ import './App.css';
 import User from './components/User';
 import Students from './components/Students';
 import CompReducer from './components/CompReducer';
+import Main  from './Main';
 
 function App() {
   return (
     <div className="App">
       Hello World !!
-      <Students/>
+      {/* <Students/>
       <User/>
-      <CompReducer/>
+      <CompReducer/> */}
+      <Main/>
     </div>
   );
 }
