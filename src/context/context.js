@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 const studentDetails = {
-    name : "Student 1",
+    name : "Sthjsjnj",
     age : 24,
     course : "MERN",
 }

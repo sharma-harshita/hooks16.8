@@ -3,15 +3,12 @@ import User from './components/User';
 import Students from './components/Students';
 import CompReducer from './components/CompReducer';
 import Main  from './Main';
+import React, {useEffect} from "react";
 
 function App() {
   return (
     <div className="App">
-      Hello World !!
-      {/* <Students/>
-      <User/>
-      <CompReducer/> */}
-      <Main/>
+        <Students/>
     </div>
   );
 }

@@ -16,11 +16,11 @@ const CompReducer = () => {
 
     const [state, dispatch] = useReducer(reducer, 0);
     
-    // const nameRef = useRef("Harshita");
+    const nameRef = useRef("Harshita");
 
-    // const handleSubmit = () =>{
-    //     console.log(nameRef.current);
-    // }
+    const handleSubmit = () =>{
+        console.log(nameRef.current);
+    }
 
     const headingRef = useRef(null);
 
@@ -34,8 +34,8 @@ const CompReducer = () => {
             <button onClick={()=>{dispatch({type:"INC"})}}>Increment</button>
             <button onClick={()=>{dispatch({type:"DEC"})}}>Decrement</button>
 
-            {/* <input id="name" value= "" type="text" ref={nameRef}/>
-            <button onClick={handleSubmit()}>CLick to submit input</button> */}
+            <input id="name" value= "" type="text" ref={nameRef}/>
+            <button onClick={handleSubmit()}>CLick to submit input</button>
             <div>
             <h1 ref={headingRef}>Name</h1>
             <button onClick={handleClick}>change heading color </button>
