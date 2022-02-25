@@ -1,1 +1,39 @@
 **REDUX**
+
+*********************************Why do we need Redux ? 
+
+Parent Component (state variable "name") <- Child 1() <- Child 2 ()   <- Child 3 (requires name state variable from parent component)
+
+You will have to pass name to Child1 and CHild2 so that CHild2 can pass name state as a prop to Child3. But We should not do this , Child1 and Child2 does not need name state variable still they are having, this is known as data redudancy. 
+
+
+Redux should Play its part at this place that name state variable should be declared in Redux store so that parent and child3 both can access from there. (userInformation)
+
+
+***********************************What is Redux : 
+It is a state management library or tool. Its not like that only React can use it, its a JS library so Angular Vue can also use it for state management.
+
+It has three priniciple : 
+    1>. Single Source of truth (STORE) : That complete state variables will be stored at one single place. If you are updating the state variable from any component then value will be updated in the store not for that specific component.
+
+    2>. State is read-only (ACTION) :  You cannot update the state directly or by using this.setState function or by using hook. If you want to update the state then you have to dispatch an action . This action will be responsible to update the state.
+
+    3>. Updation of state using Pure functions (REDUCER) : When from React component you are dispatching an action then you will be providing one action type(action.type), using this action type reducer function which is a pure function will return you the new store with updated state variable values. So all the components which are associated with any of the state variable of store will also get rerendered.
+
+
+
+*****************************************How to connect React component with Redux?
+
+Redux provides you two things like state variable and action.
+
+1>. in class component
+if you want to access state variable you will have to use mapStateToProps function
+if you want to access actions to update the state variable then use mapDispatchToProps function 
+
+Remember ::: these functions will be imported from react-redux library not from redux library.
+
+2>. in functional component 
+state variable : useSelector
+action : useDispatch.
+
+
