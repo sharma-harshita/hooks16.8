@@ -4,11 +4,13 @@ import Students from './components/Students';
 import CompReducer from './components/CompReducer';
 import Main  from './Main';
 import React, {useEffect} from "react";
+import Parent from './components/Memo&Callback/Parent';
 
 function App() {
   return (
     <div className="App">
-        <Students/>
+        {/* <Students/> */}
+        <Parent/>
     </div>
   );
 }
