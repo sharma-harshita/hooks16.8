@@ -14,7 +14,8 @@ This application contains the introduction and code to understand the Hooks got 
   3. useContext = Students.js and context.js
   4. useReducer = CompReducer.js
   5. useRef = CompReducer.js
-  6. useMemo = 
+  6. useMemo = Memo&Callback folder
+  6. useCallback = Memo&Callback folder
 
 
 Other than hooks, it contains the introduction of how to setup context API in React project
