@@ -19,3 +19,8 @@ This application contains the introduction and code to understand the Hooks got 
 
 
 Other than hooks, it contains the introduction of how to setup context API in React project
+
+
+
+
+This also contains a little explanation about Login authentication and authorization , means how to pass the JWT token in the API and also contains one socket folder explaining how to make socket connection from front-end .
