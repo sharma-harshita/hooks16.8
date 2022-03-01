@@ -6,11 +6,13 @@ import Main  from './Main';
 import React, {useEffect} from "react";
 import Parent from './components/Memo&Callback/Parent';
 import Login from './components/Login-Auth/Login';
+import Socket from './components/Socket/Socket';
 
 function App() {
   return (
     <div className="App">
-        <Login/>
+        {/* <Login/> */}
+        <Socket/>
     </div>
   );
 }
