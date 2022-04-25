@@ -7,12 +7,14 @@ import React, {useEffect} from "react";
 import Parent from './components/Memo&Callback/Parent';
 import Login from './components/Login-Auth/Login';
 import Socket from './components/Socket/Socket';
+import Test from './Hooks/useStateHook';
 
 function App() {
   return (
     <div className="App">
-        {/* <Login/> */}
-        <Socket/>
+        {/* <Login/>
+        <Socket/> */}
+        <Test/>
     </div>
   );
 }

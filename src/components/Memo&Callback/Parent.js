@@ -5,7 +5,6 @@ const Parent = () => {
     const [parentNum, setParentNum] = useState(0);
     const [childNum, setChildNum] = useState(0);
     const [salaries, setSalaries] = useState([1000,290000,267666,5678,56789,4567890]);
-    // conost
 
     function findMax(){
         console.log("InsideFunction");
