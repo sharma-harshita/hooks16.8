@@ -1,23 +1,20 @@
 import './App.css';
-import User from './components/User';
-import Students from './components/Students';
-import CompReducer from './components/CompReducer';
-import Main  from './Main';
-import React, {useEffect} from "react";
-import Parent from './components/Memo&Callback/Parent';
-import Login from './components/Login-Auth/Login';
-import Socket from './components/Socket/Socket';
-import Test from './Hooks/useStateHook';
+import React, {useState, useEffect} from "react";
+import TestUseEffect from './Hooks/useEffectHooks';
 
 function App() {
+
+  const [showComp , setShowComp] = useState(true);
+
   return (
     <div className="App">
-        {/* <Login/>
-        <Socket/> */}
-        <Test/>
+       {/* <Test/> */}
+       {showComp ? <TestUseEffect/> : null}
+       <button onClick={()=>setShowComp(false)}>Unmount useEffect Component</button>
     </div>
   );
 }
+
 
 export default App;
 
