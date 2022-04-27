@@ -1,5 +1,7 @@
 import './App.css';
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
+import UseContextHook from './Hooks/Context/useContextHook';
+import UserContextProvider from './Hooks/Context/UserContext';
 import TestUseEffect from './Hooks/useEffectHooks';
 
 function App() {
@@ -11,6 +13,9 @@ function App() {
        {/* <Test/> */}
        {showComp ? <TestUseEffect/> : null}
        <button onClick={()=>setShowComp(false)}>Unmount useEffect Component</button>
+      <UserContextProvider>
+       <UseContextHook/>
+      </UserContextProvider>
     </div>
   );
 }

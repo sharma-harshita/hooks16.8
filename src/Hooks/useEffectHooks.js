@@ -21,14 +21,22 @@ function TestUseEffect () {
     // }, [a])
 
 
-    //  componentWillUnmount,  : cleanup function in useEffect
+    // componentDidMount, componentDidUpdate componentWillUnmount
     useEffect(()=>{
         console.log("Inside useEffect hook");
 
         return ()=>{
             console.log("useEffect behaving like componentWillUnmount");
         }
-    })
+    }, [a,b])
+
+
+    //  componentWillUnmount,  : cleanup function in useEffect
+    useEffect(()=>{
+        return function cleanup(){
+            console.log("Cleanup function ");
+        }
+    },[])
 
     return(
         <h1>
