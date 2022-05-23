@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import UseContextHook from './Hooks/Context/useContextHook';
 import UserContextProvider from './Hooks/Context/UserContext';
 import TestUseEffect from './Hooks/useEffectHooks';
+import Test from './Hooks/useStateHook';
 
 function App() {
 
@@ -10,12 +11,14 @@ function App() {
 
   return (
     <div className="App">
-       {/* <Test/> */}
+       {/* <Test/>
        {showComp ? <TestUseEffect/> : null}
        <button onClick={()=>setShowComp(false)}>Unmount useEffect Component</button>
       <UserContextProvider>
        <UseContextHook/>
-      </UserContextProvider>
+      </UserContextProvider> */}
+      {/* <Test/> */}
+      <TestUseEffect/>
     </div>
   );
 }

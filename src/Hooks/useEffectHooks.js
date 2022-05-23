@@ -5,7 +5,7 @@ function TestUseEffect () {
     const [a , setA] = useState("ABC");
     const [b, setB] = useState("ZYX");
 
-    // componentDidMount and componentDidupdate
+    // componentDidMount and componentDidUpdate
     // useEffect(()=>{
     //     console.log("Hello Use effect hook")
     // })
@@ -22,21 +22,29 @@ function TestUseEffect () {
 
 
     // componentDidMount, componentDidUpdate componentWillUnmount
-    useEffect(()=>{
-        console.log("Inside useEffect hook");
+    // useEffect(()=>{
+    //     console.log("Inside useEffect hook");
+    //     return ()=>{
+    //         console.log("useEffect behaving like componentWillUnmount");
+    //     }
+    // }, [a,b])
 
-        return ()=>{
-            console.log("useEffect behaving like componentWillUnmount");
-        }
-    }, [a,b])
+
+    // componentWillUnmount,  : cleanup function in useEffect
+    // useEffect(()=>{
+    //     return function cleanup(){
+    //         console.log("Cleanup function ");
+    //     }
+    // },[])
 
 
-    //  componentWillUnmount,  : cleanup function in useEffect
+
+    // componentDidUpdate
     useEffect(()=>{
         return function cleanup(){
-            console.log("Cleanup function ");
+            console.log("Only Update");
         }
-    },[])
+    },[a])
 
     return(
         <h1>
@@ -52,8 +60,8 @@ function TestUseEffect () {
 export default TestUseEffect
 
 // useEffect : 
-// alternative of lifecycle methods 
-// when you want to make server calls 
+// alternative of lifecycle methods like (which is present and can be used only and only in class based components)
+// when you want to make server calls : 
 // componentDidMount, componentDidUpdate, componentWillUnmount
 // hook which accepts first parameter as a callback function, and second parameter is dependency array
 // if you do not want that useEffect should run like a componentDidUpate then : pass an empty dependency array.

@@ -1,5 +1,5 @@
 import React from "react";           //default imported
-import {useState, useEffect} from "react";     //named imported
+import {useState} from "react";     //named imported
 
 function Test (){ 
 
