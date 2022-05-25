@@ -7,6 +7,7 @@ import Test from './Hooks/useStateHook';
 import UseReducerHook from './Hooks/useReducerHook';
 import UseRefHook from './Hooks/useRefHook';
 import Temp from './Temp';
+import Parent from './Hooks/Memo&Callback/Parent';
 
 function App() {
 
@@ -25,10 +26,11 @@ function App() {
       {/* <TestUseEffect/> */}
       {/* <UseReducerHook/> */}
       {/* <UseRefHook/> */}
-      {a}
+      {/* {a}
       <br/>
       <button onClick={()=>setA(120)}>Change state</button>
-      <Temp name="John"/>
+      <Temp name="John"/> */}
+      <Parent/>
     </div>
   );
 }
