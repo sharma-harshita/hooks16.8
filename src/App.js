@@ -4,10 +4,14 @@ import UseContextHook from './Hooks/Context/useContextHook';
 import UserContextProvider from './Hooks/Context/UserContext';
 import TestUseEffect from './Hooks/useEffectHooks';
 import Test from './Hooks/useStateHook';
+import UseReducerHook from './Hooks/useReducerHook';
+import UseRefHook from './Hooks/useRefHook';
+import Temp from './Temp';
 
 function App() {
 
   const [showComp , setShowComp] = useState(true);
+  const [a , setA] = useState(12);
 
   return (
     <div className="App">
@@ -18,7 +22,13 @@ function App() {
        <UseContextHook/>
       </UserContextProvider> */}
       {/* <Test/> */}
-      <TestUseEffect/>
+      {/* <TestUseEffect/> */}
+      {/* <UseReducerHook/> */}
+      {/* <UseRefHook/> */}
+      {a}
+      <br/>
+      <button onClick={()=>setA(120)}>Change state</button>
+      <Temp name="John"/>
     </div>
   );
 }
