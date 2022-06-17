@@ -91,3 +91,28 @@ It will take two arguments , one is callback function in which you will execute 
 
 Structure : const memoizedFun = useMemo(()=>fun(), []) 
 
+
+
+Props Drilling : When you are having a component which is Parent component and it is having some nested child components. Now if any of my child component like child3.js needs some state variable which is present in parent component then this variable has to be passed as a props through child1 and child2 component . This is known as props drilling.
+
+
+Parent.js -> Child1.js -> child2.js -> child3.js
+
+<div>
+	<Child1/>
+</div>
+
+
+State Uplifting : If there is any state variable which is present in child component and this state variable is required by another child component then it is not even possible to send this data to child2.js . This is the problem which we have resolve by uplifting the state to one level and bring it to parent.js so that it can be passed to both child components. but it becomes complex during the time. So, we are having Context API.
+
+
+Parent.js -> Child1.js
+		  -> Child2.js
+
+
+
+<div>
+	<Child1/>
+	<Child2/>
+</div>
+
