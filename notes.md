@@ -67,3 +67,27 @@ document.getElementById("id")
 
 The ref variable returns you an object , this object will have a property named as current.
 
+useCallback ->
+
+It occurs when you are having Parent and child relationship. 
+Problem : When are passing some state variable from Parent to child component then even when you are updating the state of parent component the child component will be rerendered because since the state has got updated so the completed dom has to be rerendered so child component will also be executed again. So avoid this we can create child component as pure component
+But if we are passing functions also from parent to child then pure component means using memo will fail because of refrential quality. It says that whenever you are updating the dom the functions will be reallocated with the new memory location so memo will not work here. 
+
+Solution : So to avoid this instead of passind normal function we need to pass the function which returned by useCallback hook 
+
+Structure : This hook takes two arguments , first would be the callback function inside which you will execute or invoke your main function which was required to be passed as an props to child. another would be the dependency array.
+
+const callbackedFun = useCallback(()=>fun(), [])
+
+
+
+useMemo ->
+
+Problem : When you are in a component and you are having a function and a state variable . Then whenever you will update the state variable this another defined function who is not having any relation with your state variable will also get executed since dom is getting rerendered because state has been updated. 
+So if this function is making any heavy and expensive calculations then it is not good to execute the function on every render when it is not required to be executed.
+
+SOlution : we will create and use a function returned by useMemo hook. Now this function will not be executed everytime any state value is getting changed . It will be executed only when the state which is present in its dependency array.
+It will take two arguments , one is callback function in which you will execute the main function required and second would be the dependency array.
+
+Structure : const memoizedFun = useMemo(()=>fun(), []) 
+
