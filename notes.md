@@ -1,13 +1,13 @@
-useState hook 
-
+**useState hook 
+**
 const [count, setCount] = useState(0);
 
 useState hook is used to create state in functional component . It takes one argument which will be the initial value of the state variable. It returns two values first is the state variable name and function to update the state variable name.
 
 
 
-useEffect : 
- 
+**useEffect : 
+** 
 useEffect(()=>{
 	
 	return function cleanup(){
@@ -25,8 +25,8 @@ Unmounting : clean funtion will be executed
 
 
 
-useReducer : 
-
+**useReducer : 
+**
 const reducerFun = (state, action) => {
 	switch(action.type){
 		case "ACTION_1":
@@ -46,8 +46,8 @@ And it returns two values as state and dispatch . This state variable can be use
 reducer function : will take two parameters first will be state and another will be action , This function will be responsible t return the updated state variable value based on the action type.
 
 
-useRef: 
-
+**useRef: 
+**
 Controlled components are the ones where the data will be handled by the state variables. 
 Uncontrolled are the ones where the data will be handled by ref variables.
 
@@ -67,7 +67,7 @@ document.getElementById("id")
 
 The ref variable returns you an object , this object will have a property named as current.
 
-useCallback ->
+**useCallback**
 
 It occurs when you are having Parent and child relationship. 
 Problem : When are passing some state variable from Parent to child component then even when you are updating the state of parent component the child component will be rerendered because since the state has got updated so the completed dom has to be rerendered so child component will also be executed again. So avoid this we can create child component as pure component
@@ -81,7 +81,7 @@ const callbackedFun = useCallback(()=>fun(), [])
 
 
 
-useMemo ->
+**useMemo**
 
 Problem : When you are in a component and you are having a function and a state variable . Then whenever you will update the state variable this another defined function who is not having any relation with your state variable will also get executed since dom is getting rerendered because state has been updated. 
 So if this function is making any heavy and expensive calculations then it is not good to execute the function on every render when it is not required to be executed.
