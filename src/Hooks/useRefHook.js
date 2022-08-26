@@ -1,4 +1,5 @@
 import React, { useState, useRef }  from "react";
+import ForwardRef from "./ForwardRef";
 
 function UseRefHook (){
     console.log("Rendered");
@@ -10,10 +11,11 @@ function UseRefHook (){
             <h2>{a}</h2>
             {/* <input type="text" value={a} onChange={(e)=>setA(e.target.value)}/> */}
 
-
             {/* Soultion by using useRef hook */}
             <input type="text" ref={aRef} />
             <button onClick={()=>setA(aRef.current.value)}>SetValue</button>
+            
+            {a &&  <ForwardRef ref={aRef}/>}
         </div>
     )
 }
