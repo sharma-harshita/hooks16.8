@@ -1,20 +1,13 @@
 import React from "react";
-import User from "./components/User";
-import LoginHOC from "./LoginHOC";
+import TestChild from "./Test";
 
-function Main (props){
-    const value = props;
+function Main (){
     return(
         <div>
-            { 
-            value.loggedIn ===true
-             ? 
-                <div>Success</div>
-             :
-                <div>Failue</div>
-            }
+            Main component
+            <TestChild  name={"Harsh"} age={24}/>
         </div>
     )
 }
 
-export default LoginHOC(Main)
+export default (Main)

@@ -31,20 +31,21 @@ function TestUseEffect () {
 
 
     // componentWillUnmount,  : cleanup function in useEffect
-    // useEffect(()=>{
-    //     return function cleanup(){
-    //         console.log("Cleanup function ");
-    //     }
-    // },[])
+    useEffect(()=>{
+        console.log("Helllo");
+        return function cleanup(){
+            console.log("Cleanup function ");
+        }
+    },[])
 
 
 
     // componentDidUpdate
-    useEffect(()=>{
-        return function cleanup(){
-            console.log("Only Update");
-        }
-    },[a])
+    // useEffect(()=>{
+    //     return function cleanup(){
+    //         console.log("Only Update");
+    //     }
+    // },[a])
 
     return(
         <h1>
